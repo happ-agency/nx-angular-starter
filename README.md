@@ -9,26 +9,44 @@
 3. [App](#app)
 4. [Libray](#library)
 5. [Pulbishable Library](#publishable-library)
-6. [Universal](#universal)
-7. [HMR](#hmr)
-8. [i18n](#i18n)
+6. [i18n](#i18n)
+7. [Universal](#universal)
+8. [HMR](#hmr)
+9. [Css Reset](#css-reset)
+9. [Normalize](#hmr)
+9. [Angular Material](#angular-material)
+10. [Tailwind](#tailwind)
+11. [Used Libraries](#used-libraries)
+12. [Related Projects](#related-projects)
 
 ## Angular
 1. Install [Angular](https://angular.io/): `pnpm i -D @nrwl/angular`
 
 ## CLI
 1. Install [Angular CLI]() (only for dev): `pnpm install -D @angular/cli`
-2. Change `workspace.json` to `angular.json` with:
+2. Replace `workspace.json` to `angular.json` with:
 	1. `version: 2` to `version:1`
 	2. `targets` to `architect`
 	3. `generators` to `schematics`
 	4. `executor` to `builder`
 
 ## App
-1. Create an [Angular](https://angular.io/) `app`: `npx nx g @nrwl/angular:app APP_NAME --style=scss --routing=true`
+1. Create an [Angular](https://angular.io/) `app`: `pnpx nx g @nrwl/angular:app APP_NAME --style=scss --routing=true`
 	> 1. `APP_NAME` - name of the application
 	> 2. `--style=scss` - default styles
 	> 3. `--routing=true` - use routes by default or not
+2. Create:
+	1. `environment.example.ts` from `environment.ts`
+	2. `environment.prod.example.ts` from `environment.prod.ts`
+3. Update `.gitignore` with:
+	```
+	# APP_NAME Angular Environment
+	/apps/APP_NAME/src/environments/environment.ts
+	/apps/APP_NAME/src/environments/environment.prod.ts
+ 	```
+ 
+	> Use `environment.*.example.ts` to push on git.
+
 ## Library
 1. Create an [Angular](https://angular.io/) `library`: `npx nx g @nrwl/angular:lib LIB_NAME`
 	> 1. `APP_NAME` - name of the application
@@ -38,7 +56,59 @@
 	> 1. `APP_NAME` - name of the application
 	> 2. `--publishable` - to create build target in the `angular.json` or `workspace.json` which is the same
 	> 3. `--importPath=NPM_NAME` - name of npm package
-	 
+
+## i18n
+
+1. Install [@angular/localize](https://angular.io/guide/i18n): `pnpm i @angular/localize`
+2. Add [@angular/localize](https://angular.io/guide/i18n) to your app: `npx nx g @angular/localize:ng-add`
+3. Update your `angular.json` with:
+
+	 <details>
+	 	<summary>angular.json</summary>
+
+	 	...
+	 	"i18n": {
+	 		"sourceLocale": "en-US",
+	 		"locales": {
+	 			"ru": "apps/APP_NAME/src/i18n/messages.xlf"
+	 		}
+	 	},
+	 	"targets": {
+	 		"build": {
+	 			"options": {
+	 				"localize": true,
+	 			}
+	 				configurations: {
+	 				"ru": {
+	 					"localize": ["ru"]
+	 				}
+	 			}
+	 		}
+	 		"serve": {
+	 			configurations: {
+	 				"ru": {
+	 					"localize": ["ru"]
+	 				}
+	 			}
+	 		}
+	 	}
+	 </details> 
+
+4. Update your `package.json` with:
+
+	 <details>
+	 	<summary>package.json</summary>
+
+	 	"extract": "nx extract-i18n --output-path apps/APP_NAME/src/i18n",
+	 	"dev:ru": "nx serve --configuration=ru"
+	 </details> 
+
+5. Install [@ngx-i18nsupport/tooling](https://www.npmjs.com/package/@ngx-i18nsupport/tooling) run: `pnpm i @ngx-i18nsupport/tooling`
+6. Add [@ngx-i18nsupport/tooling](https://www.npmjs.com/package/@ngx-i18nsupport/tooling) for your app run: `npx nx g @ngx-i18nsupport/tooling:ng-add  --i18nLocale=en --languages en,ru --i18nFormat=xlf`
+	 > 1. `--i18nLocale=en` - default locale
+	 > 2. `--languages=en,ru` - available languages (You can add more later)
+	 > 3. `--i18nFormat=xlf` - format of translate files
+
 ## Universal
 1. Install [Angular Universal](https://angular.io/guide/universal): `pnpm i @nguniversal/express-engine`
 2. Add [Angular Universal](https://angular.io/guide/universal) to your app: `npx nx g @nguniversal/express-engine:ng-add --client-project=APP_NAME`
@@ -172,60 +242,94 @@
 	</details>  
 
 9. Add `"hmr": "nx serve --configuration hmr"` to your `package.json` scripts
+	
+## CSS Reset
+1. Create `apps/APP_NAME/src/assets/styles/reset.css` with [Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
+2. Update `styles.scss` with: 
+	```
+	@import '~assets/styles/reset.css';
+	```
 
-## i18n
+## Normalize
 
-1. Install [@angular/localize](https://angular.io/guide/i18n): `pnpm i @angular/localize`
-2. Add [@angular/localize](https://angular.io/guide/i18n) to your app: `npx nx g @angular/localize:ng-add`
-3. Update your `angular.json` with:
+1. Install [normalize](https://necolas.github.io/normalize.css/) `pnpm i normalize.css`
+2. Update `styles.scss` with:
+	```
+	@import '~normalize.css';
+	```
 
-	<details>
-		<summary>angular.json</summary>
-		
-		...
-		"i18n": {
-			"sourceLocale": "en-US",
-			"locales": {
-				"ru": "apps/APP_NAME/src/i18n/messages.xlf"
-			}
-		},
-		"targets": {
-			"build": {
-				"options": {
-					"localize": true,
-				}
-					configurations: {
-					"ru": {
-						"localize": ["ru"]
-					}
-				}
-			}
-			"serve": {
-				configurations: {
-					"ru": {
-						"localize": ["ru"]
-					}
-				}
-			}
-		}
-	</details> 
+## Angular Material
 
-4. Update your `package.json` with:
+1. Install [@angular/material](https://www.npmjs.com/package/@angular/material): `ng add @angular/material`
 
-	<details>
-		<summary>package.json</summary>
-		
-		"hmr": "nx serve --configuration hmr",
-		"extract": "nx extract-i18n --output-path apps/APP_NAME/src/i18n",
-		"dev:ru": "nx serve --configuration=ru"
-	</details> 
+## Tailwind
 
-5. Install [@ngx-i18nsupport/tooling](https://www.npmjs.com/package/@ngx-i18nsupport/tooling) run: `pnpm i @ngx-i18nsupport/tooling`
-6. Add [@ngx-i18nsupport/tooling](https://www.npmjs.com/package/@ngx-i18nsupport/tooling) for your app run: `npx nx g @ngx-i18nsupport/tooling:ng-add  --i18nLocale=en --languages en,ru --i18nFormat=xlf`
-	> 1. `--i18nLocale=en` - default locale
-	> 2. `--languages=en,ru` - available languages (You can add more later)
-	> 3. `--i18nFormat=xlf` - format of translate files
-	 
+1. Install [@ngneat/tailwind](https://www.npmjs.com/package/@ngneat/tailwind): `ng add @ngneat/tailwind`
+
+> ! IMPORTANT
+> 
+> Setup [Tailwind](#tailwind) after the [Angular Material](#angular-material). 
+> 
+> `Angular Material` schematics will error out if it detects a custom webpack
+
+## Structure
+
+ ```
+	┌─ apps/ 
+	│  ┌─ APP_NAME/
+	│  │  ┌─ src/
+	│  │  │  ┌─ app/
+	│  │  │  │  ┌─ core/
+	│  │  │  │  │  ┌─ layout/
+	│  │  │  │  │  │  ┌─ core.coponent.html
+	│  │  │  │  │  │  ├─ core.component.scss
+	│  │  │  │  │  │  ├─ core.component.spec.ts
+	│  │  │  │  │  │  └─ core.component.ts
+	│  │  │  │  │  ├─ core.routing.module.ts
+	│  │  │  │  │  └─ core.module.ts
+	│  │  │  │  ├─ shared/
+	│  │  │  │  │  └─ shared.module.ts
+	│  │  │  │  ├─ */
+	│  │  │  │  │  ┌─ layout/
+	│  │  │  │  │  │  ┌─ *.coponent.html
+	│  │  │  │  │  │  ├─ *.component.scss
+	│  │  │  │  │  │  ├─ *.component.spec.ts
+	│  │  │  │  │  │  └─ *.component.ts
+	│  │  │  │  │  ├─ *.routing.module.ts
+	│  │  │  │  │  └─ *.module.ts
+	│  │  │  │  └── app.module.ts
+	│  │  │  ├── assets/
+	│  │  │  │  ┌─ images/
+	│  │  │  │  └─ styles/
+	│  │  │  ├─ environment/
+	│  │  │  │  ┌─ environment.*.ts
+	│  │  │  │  └─ environment.*.example.ts
+	│  │  │  ├── i18n/
+	├──┴──┴──┘  └─ messages.*.xlf
+	├─ libs/ 
+	│  ┌─ LIB_NAME/
+	│  │  ┌─ src/
+	│  │  │  ┌─ lib/
+	│  │  │  ├── LIB_NAME.module.ts
+	└──┴──┴──┘
+ ```
+
+
+
+## Used Libraries
+1. [@nrwl/angular](https://www.npmjs.com/package/@nrwl/angular)
+2. [@angular/cli](https://www.npmjs.com/package/@angular/cli)
+3. [@angular/localize](https://angular.io/guide/i18n)
+4. [@ngx-i18nsupport/tooling](https://www.npmjs.com/package/@ngx-i18nsupport/tooling)
+5. [@nguniversal/express-engine](https://www.npmjs.com/package/@nguniversal/express-engine)
+6. [@angularclass/hmr](https://www.npmjs.com/package/@angularclass/hmr)
+7. [@angular/material](https://www.npmjs.com/package/@angular/material)
+8. [@ngneat/tailwind](https://www.npmjs.com/package/@ngneat/tailwind)
+
+## Nice to use libraries
+1. [until-destroy](https://github.com/ngneat/until-destroy)
+
+
 ## Related Projects:
 1. [nx-starter](https://github.com/happ-agency/nx-starter)
 2. [nx-web-starter](https://github.com/happ-agency/nx-web-starter)
@@ -235,3 +339,5 @@
 ## Additional Info
 
 > You can check additional info in [nx-starter](https://github.com/happ-agency/nx-starter)
+
+1. Install  (only for dev): `pnpm i -D @angularclass/hmr`
