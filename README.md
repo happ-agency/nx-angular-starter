@@ -25,7 +25,7 @@
 ## CLI
 1. Install [Angular CLI]() (only for dev): `pnpm install -D @angular/cli`
 2. Replace `workspace.json` to `angular.json` with:
-	1. `version: 2` to `version:1`
+	1. `version: 2` to `version: 1`
 	2. `targets` to `architect`
 	3. `generators` to `schematics`
 	4. `executor` to `builder`
