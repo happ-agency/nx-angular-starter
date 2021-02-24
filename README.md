@@ -52,8 +52,14 @@
 ## Angular Localize
 
 1. Install [@angular/localize](https://angular.io/guide/i18n) only for dev: `pnpm i -D @angular/localize`
-2. Add [@angular/localize](https://angular.io/guide/i18n) to your app: `pnpx nx g @angular/localize:ng-add`
-3. Update your `workspace.json` with:
+2. Update `apps/app-name/src/polyfills.ts` with:
+	 <details>
+		 <summary>polyfills.ts</summary>
+
+		import '@angular/localize/init';
+	 	...
+	 </details>
+3. Update `workspace.json` with:
 
 	 <details>
 	 	<summary>workspace.json</summary>
@@ -65,7 +71,7 @@
 	 			"APP_NAME": {
 					...
 					"i18n": {
-						"sourceLocale": "LANGUAGE",
+						"sourceLocale": "LANGUAGE"
 					},
 					"targets": {
 						"build": {
