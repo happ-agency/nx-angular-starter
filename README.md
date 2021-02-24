@@ -5,9 +5,9 @@
 ## Content
 
 1. [Angular](#nrwl-angular)
-2. [App](#nrwl-angular-app)
-3. [Libray](#nrwl-angular-library)
-4. [Pulbishable library](#nrwl-angular-publishable-library)
+2. [Nrwl angular app](#nrwl-angular-app)
+3. [Nrwl angular library](#nrwl-angular-library)
+4. [Nrwl angular publishable library](#nrwl-angular-publishable-library)
 5. [Angular localize](#angular-localize)
 6. [Ngx i18n support tooling](#ngx-i18n-support-tooling)
 7. [Xliffmerge autotranslate feature](#xliffmerge-autotranslate-feature)
