@@ -275,7 +275,53 @@
 ## Css reset
 > [Css reset](https://meyerweb.com/eric/tools/css/reset/)
 
-1. Create `apps/APP_NAME/src/assets/styles/reset.css` with [Css reset](https://meyerweb.com/eric/tools/css/reset/)
+1. Create `apps/APP_NAME/src/assets/styles/reset.css` with:
+	 <details>
+	 <summary>reset.css</summary>
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+	  </details>
 2. Update `styles.scss` with: 
 
 	 <details>
@@ -301,12 +347,30 @@
 ## Angular material
 > [Angular material](https://www.npmjs.com/package/@angular/material)
 
-1. Install [@angular/material](https://www.npmjs.com/package/@angular/material): `ng add @angular/material`
+1. Install [@angular/material](https://www.npmjs.com/package/@angular/material): `pnpm i @angular/material`
+2. Add [@angular/material](https://www.npmjs.com/package/@angular/material) to app: `pnpx nx g @angular/material:ng-add`
 
 ## Tailwind
 > [Tailwind](https://www.npmjs.com/package/@ngneat/tailwind)
 
-1. Install [@ngneat/tailwind](https://www.npmjs.com/package/@ngneat/tailwind): `ng add @ngneat/tailwind`
+1. Install [@ngneat/tailwind](https://www.npmjs.com/package/@ngneat/tailwind): `pnpm i @ngneat/tailwind`
+2. Add [@ngneat/tailwind](https://www.npmjs.com/package/@ngneat/tailwind) to app: `pnpx nx g @ngneat/tailwind:ng-add`
+3. Install [official plugins](https://tailwindcss.com/docs/plugins): `pnpm i @tailwindcss/typography @tailwindcss/forms @tailwindcss/line-clamp @tailwindcss/aspect-ratio`
+2. Update `tailwind.config.js` with:
+
+	 <details>
+	 	<summary>tailwind.config.js</summary>
+
+		module.exports = {
+			...
+			plugins: [
+				require('@tailwindcss/typography'),
+				require('@tailwindcss/forms'),
+				require('@tailwindcss/line-clamp'),
+				require('@tailwindcss/aspect-ratio'),
+			],
+		}
+	 </details>
 
 > ! IMPORTANT
 > 
