@@ -37,3 +37,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# app-name Angular Environment
+/apps/app-name/src/environments/environment.ts
+/apps/app-name/src/environments/environment.prod.ts

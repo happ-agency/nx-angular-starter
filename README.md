@@ -22,7 +22,7 @@
 
 ## Nrwl Angular
 > [Nrwl angular](https://www.npmjs.com/package/@nrwl/angular)
-1. Install [@nrwl/angular](https://www.npmjs.com/package/@nrwl/angular): `pnpm i -D @nrwl/angular`
+1. Install [@nrwl/angular](https://www.npmjs.com/package/@nrwl/angular) only for dev: `pnpm i -D @nrwl/angular`
 
 ## Nrwl angular app
 > [Nrwl angular application](https://nx.dev/latest/angular/angular/application)
