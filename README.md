@@ -4,7 +4,7 @@
 
 ## Content
 
-1. [Angular](#nrwl-angular)
+1. [Nrwl angular](#nrwl-angular)
 2. [Nrwl angular app](#nrwl-angular-app)
 3. [Nrwl angular library](#nrwl-angular-library)
 4. [Nrwl angular publishable library](#nrwl-angular-publishable-library)
