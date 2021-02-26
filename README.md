@@ -17,8 +17,11 @@
 11. [Normalize](#normalize)
 12. [Angular material](#angular-material)
 13. [Tailwind](#tailwind)
-14. [Used libraries](#used-libraries)
-15. [Related projects](#related-projects)
+14. [Angular flex layout](#angular-flex-layout)
+15. [Structure](#structure)
+16. [Used libraries](#used-libraries)
+17. [Nice to use libraries](#nice-to-use-libraries)
+18. [Related projects](#related-projects)
 
 ## Nrwl Angular
 > [Nrwl angular](https://www.npmjs.com/package/@nrwl/angular)
@@ -378,6 +381,12 @@
 > 
 > `Angular Material` schematics will error out if it detects a custom webpack
 
+## Angular flex layout
+> [Angular flex layout](https://www.npmjs.com/package/@angular/flex-layout)
+
+1. Install [@angular/flex-layout](https://www.npmjs.com/package/@angular/flex-layout): `pnpm i @angular/flex-layout @angular/cdk`
+2. Add `FlexLayoutModule` to the module
+
 ## Structure
 
  ```
@@ -429,9 +438,287 @@
 6. [@angularclass/hmr](https://www.npmjs.com/package/@angularclass/hmr)
 7. [@angular/material](https://www.npmjs.com/package/@angular/material)
 8. [@ngneat/tailwind](https://www.npmjs.com/package/@ngneat/tailwind)
+9. [@angular/flex-layout](https://www.npmjs.com/package/@angular/flex-layout)
 
 ## Nice to use libraries
+
+1. [Advertising](#advertising)
+2. [Animation](#animation)
+3. [App tour](#app-tour)
+4. [Auth](#auth)
+5. [Avatar](#avatar)
+6. [Backend](#backend)
+7. [Calendars](#calendars)
+8. [Carousel](#carousel)
+9. [Charts](#charts)
+10. [Config](#config)
+11. [Context menu](#context-menu)
+12. [Clipboard](#clipboard)
+13. [Debugging and logging](#debugging-and-logging)
+14. [Documentation](#documentation)
+15. [Dragging](#dragging)
+16. [Editor components](#editor-components)
+17. [Editor utils](#editor-utils)
+18. [Firebase](#firebase)
+19. [File upload](#file-upload)
+20. [Form components](#form-components)
+21. [Form utils](#form-utils)
+22. [Form validation](#form-validation)
+23. [Generators](#generators)
+24. [Hotkeys](#hotkeys)
+25. [Images](#images)
+26. [Loaders](#loaders)
+27. [Maps](#maps)
+28. [Masks](#masks)
+29. [Media](#media)
+30. [Perfomance](#perfomance)
+31. [Pipes](#pipes)
+32. [Ratings](#ratings)
+33. [Notifications](#notifications)
+34. [Pdf](#pdf)
+35. [Social Medias](#social-medias)
+36. [Storage](#storage)
+37. [Scroll](#scroll)
+38. [Seo](#seo)
+39. [State manager](#state-manager)
+40. [Tree](#tree)
+41. [Table components](#table-components)
+42. [Table utils](#table-utils)
+43. [Translates](#translates)
+44. [Ui Libraries](#ui-libraries)
+45. [Ui components](#ui-components)
+46. [Ui layouts](#ui-layouts)
+47. [Utils](#utils)
+
+### Advertising
+1. [ng2-adsense](https://www.npmjs.com/package/ng2-adsense)
+
+### Animation
+1. [ng-animate](https://www.npmjs.com/package/ng-animate)
+2. [ngx-teximate](https://www.npmjs.com/package/ngx-teximate)
+3. [angular-animations](https://www.npmjs.com/package/angular-animations)
+
+### App tour
+1. [angular-shepherd](https://www.npmjs.com/package/angular-shepherd)
+2. [ngx-app-tour](https://github.com/hamdiwanis/ngx-app-tour)
+
+### Auth
+1. [@ngx-auth/core](https://www.npmjs.com/package/@ngx-auth/core)
+2. [ngx-permissions](https://www.npmjs.com/package/ngx-permissions)
+3. [@auth0/angular-jwt](https://www.npmjs.com/package/@auth0/angular-jwt)
+4. [@casl/angular](https://www.npmjs.com/package/@casl/angular)
+
+### Avatar
+1. [ngx-avatar](https://www.npmjs.com/package/ngx-avatar)
+
+### Backend
+1. [ngx-restangular](https://www.npmjs.com/package/ngx-restangular)
+2. [angular2-query-builder](https://www.npmjs.com/package/angular2-query-builder)
+
+### Calendars
+1. [@fullcalendar/angular](https://www.npmjs.com/package/@fullcalendar/angular)
+2. [angular-calendar](https://www.npmjs.com/package/angular-calendar)
+
+### Carousel
+1. [ngx-flicking](https://www.npmjs.com/package/@egjs/ngx-flicking)
+2. [@ngu/carousel](https://www.npmjs.com/package/@ngu/carousel)
+3. [ngx-swiper-wrapper](https://www.npmjs.com/package/ngx-swiper-wrapper)
+
+### Charts
+1. [ng2-charts](https://www.npmjs.com/package/ng2-charts)
+2. [@swimlane/ngx-charts](https://www.npmjs.com/package/@swimlane/ngx-charts)
+
+### Config
+1. [@ngx-config/core](https://www.npmjs.com/package/@ngx-config/core)
+
+### Context menu
+1. [ngx-contextmenu](https://www.npmjs.com/package/ngx-contextmenu)
+2. [@ctrl/ngx-rightclick](https://www.npmjs.com/package/@ctrl/ngx-rightclick)
+
+### Clipboard
+1. [ngx-clipboard](https://www.npmjs.com/package/ngx-clipboard)
+
+### Debugging and logging
+1. [angular-rollbar](https://www.npmjs.com/package/angular-rollbar)
+2. [ngx-logger](https://www.npmjs.com/package/ngx-logger)
+
+### Documentation
+1. [@compodoc/compodoc](https://www.npmjs.com/package/@compodoc/compodoc)
+
+### Dragging
+1. [ng2-dragula](https://www.npmjs.com/package/ng2-dragula)
+2. [ngx-drag-to-select](https://www.npmjs.com/package/ngx-drag-to-select)
+
+### Editor components
+1. [angular-froala-wysiwyg](https://www.npmjs.com/package/angular-froala-wysiwyg)
+2. [@ctrl/ngx-codemirror](https://www.npmjs.com/package/@ctrl/ngx-codemirror)
+3. [@kolkov/angular-editor](https://www.npmjs.com/package/@kolkov/angular-editor)
+
+### Editor utils
+1. [ngx-highlightjs](https://www.npmjs.com/package/ngx-highlightjs)
+
+### Firebase
+1. [@angular/fire](https://www.npmjs.com/package/@angular/fire)
+2. [ngx-auth-firebaseui](https://www.npmjs.com/package/ngx-auth-firebaseui)
+
+### File upload
+1. [ng2-file-upload](https://www.npmjs.com/package/ng2-file-upload)
+2. [ngx-awesome-uploader](https://www.npmjs.com/package/ngx-awesome-uploader)
+3. [ngx-dropzone](https://www.npmjs.com/package/ngx-dropzone)
+4. [@flowjs/ngx-flow](https://www.npmjs.com/package/@flowjs/ngx-flow)
+
+### Form components
+1. [@ctrl/ngx-emoji-mart](https://www.npmjs.com/package/@ctrl/ngx-emoji-mart)
+3. [angular2-multiselect-dropdown](https://www.npmjs.com/package/angular2-multiselect-dropdown)
+4. [@ng-select/ng-select](https://www.npmjs.com/package/@ng-select/ng-select)
+5. [ng2-select](https://www.npmjs.com/package/ng2-select)
+6. [ngx-color](https://www.npmjs.com/package/ngx-color)
+7. [ngx-color-picker](https://www.npmjs.com/package/ngx-color-picker)
+8. [angular2-multiselect-dropdown](https://www.npmjs.com/package/angular2-multiselect-dropdown)
+9. [@ngneat/edit-in-place](https://www.npmjs.com/package/@ngneat/edit-in-place)
+10. [@ngx-formly/core](https://www.npmjs.com/package/@ngx-formly/core)
+15. [ngx-material-timepicker](https://www.npmjs.com/package/ngx-material-timepicker)
+
+### Form utils
+1. [ngx-typesafe-forms](https://www.npmjs.com/package/ngx-typesafe-forms)
+2. [ngx-image-cropper](https://www.npmjs.com/package/ngx-image-cropper)
+3. [@rxweb/types](https://www.npmjs.com/package/@rxweb/types)
+4. [@ngneat/forms-manager](https://www.npmjs.com/package/@ngneat/forms-manager)
+5. [ngx-moment](https://www.npmjs.com/package/ngx-moment)
+
+### Form validation
+1. [ngx-custom-validators](https://www.npmjs.com/package/ngx-custom-validators)
+2. [ngx-validators](https://www.npmjs.com/package/ngx-validators)
+3. [ngx-phone-validators](https://www.npmjs.com/package/ngx-phone-validators)
+
+### Generators
+1. [unique-names-generator](https://www.npmjs.com/package/unique-names-generator)
+2. [chance](https://www.npmjs.com/package/chance)
+3. [uuid](https://www.npmjs.com/package/uuid)
+4. [@techiediaries/ngx-qrcode](https://www.npmjs.com/package/@techiediaries/ngx-qrcode)
+
+### Hotkeys
+1. [@ngneat/hotkeys](https://www.npmjs.com/package/@ngneat/hotkeys)
+
+### Images
+1. [ngx-masonry](https://www.npmjs.com/package/ngx-masonry)
+2. [ngx-gallery](https://www.npmjs.com/package/ngx-gallery)
+3. [ng-lazyload-image](https://www.npmjs.com/package/ng-lazyload-image)
+4. [ngx-img-fallback](https://www.npmjs.com/package/ngx-img-fallback)
+5. [ng2-safe-img](https://www.npmjs.com/package/ng2-safe-img)
+6. [@ngneat/svg-icon](https://www.npmjs.com/package/@ngneat/svg-icon)
+
+### Loaders
+1. [angular-epic-spinners](https://www.npmjs.com/package/angular-epic-spinners)
+2. [angular2-busy](https://www.npmjs.com/package/angular2-busy)
+3. [angular2-promise-buttons](https://www.npmjs.com/package/angular2-promise-buttons)
+5. [ngx-progressbar](https://www.npmjs.com/package/ngx-progressbar)
+6. [ngx-skeleton-loader](https://www.npmjs.com/package/ngx-skeleton-loader)
+7. [ngx-perfect-scrollbar](https://www.npmjs.com/package/ngx-perfect-scrollbar)
+8. [ng2-slim-loading-bar](https://www.npmjs.com/package/ng2-slim-loading-bar)
+
+### Maps
+1. [angular-cesium](https://www.npmjs.com/package/angular-cesium)
+2. [@agm/core](https://www.npmjs.com/package/@agm/core)
+3. [ngx-mapbox-gl](https://www.npmjs.com/package/ngx-mapbox-gl)
+4. [@angular/google-maps](https://www.npmjs.com/package/@angular/google-maps)
+
+### Masks
+1. [ngx-mask](https://www.npmjs.com/package/ngx-mask)
+2. [angular-imask](https://www.npmjs.com/package/angular-imask)
+
+### Media
+1. [ngx-youtube-player](https://www.npmjs.com/package/ngx-youtube-player)
+2. [ngx-audio-player](https://www.npmjs.com/package/ngx-audio-player)
+
+### Perfomance
+1. [angular-performance-checklist](https://github.com/mgechev/angular-performance-checklist)
+2. [angular-idle-preload](https://www.npmjs.com/package/angular-idle-preload)
+
+### Pipes
+1. [ngx-filter-pipe](https://www.npmjs.com/package/ngx-filter-pipe)
+2. [ngx-pipes](https://www.npmjs.com/package/ngx-pipes)
+3. [angular-pipes](https://www.npmjs.com/package/angular-pipes)
+4. [ngx-linky](https://www.npmjs.com/package/ngx-linky)
+5. [ngx-order-pipe](https://www.npmjs.com/package/ngx-order-pipe)
+6. [ngx-linkifyjs](https://www.npmjs.com/package/ngx-linkifyjs)
+
+### Ratings
+1. [ngx-bar-rating](https://github.com/MurhafSousli/ngx-bar-rating)
+
+### Notifications
+1. [ng-snotify](https://www.npmjs.com/package/ng-snotify)
+2. [ngx-popper](https://www.npmjs.com/package/ngx-popper)
+3. [ngx-toastr](https://www.npmjs.com/package/ngx-toastr)
+
+### Pdf
+1. [ng2-pdf-viewer](https://www.npmjs.com/package/ng2-pdf-viewer)
+
+### Social Medias
+1. [ngx-sharebuttons](https://www.npmjs.com/package/ngx-sharebuttons)
+
+### Storage
+1. [angular-2-local-storage](https://www.npmjs.com/package/angular-2-local-storage)
+2. [ngx-webstorage](https://www.npmjs.com/package/ngx-webstorage)
+3. [ngx-store](https://www.npmjs.com/package/ngx-store)
+
+### Scroll
+1. [ngx-infinite-scroll](https://www.npmjs.com/package/ngx-infinite-scroll)
+2. [angular2-infinite-scroll](https://www.npmjs.com/package/angular2-infinite-scroll)
+
+### Seo
+1. [@ngx-meta/core](https://www.npmjs.com/package/@ngx-meta/core)
+2. [xng-breadcrumb](https://www.npmjs.com/package/xng-breadcrumb)
+3. [@scullyio](https://www.npmjs.com/package/@scullyio/init)
+4. [@ngx-cache](https://www.npmjs.com/package/@ngx-cache/core)
+5. [angulartics2](https://www.npmjs.com/package/angulartics2)
+
+### State manager
+1. [@datorama/akita](https://www.npmjs.com/package/@datorama/akita)
+2. [@ngxs/store](https://www.npmjs.com/package/@ngxs/store)
+3. [@ngrx/store](https://www.npmjs.com/package/@ngrx/store)
+
+### Tree
+1. [ngx-treeview](https://www.npmjs.com/package/ngx-treeview)
+2. [@circlon/angular-tree-component](https://www.npmjs.com/package/@circlon/angular-tree-component)
+
+### Table components
+1. [ag-grid-community](https://www.npmjs.com/package/ag-grid-community)
+2. [ng2-handsontable](https://www.npmjs.com/package/ng2-handsontable)
+3. [ng2-smart-table](https://www.npmjs.com/package/ng2-smart-table)
+4. [ng2-table](https://www.npmjs.com/package/ng2-table)
+5. [@swimlane/ngx-datatable](https://www.npmjs.com/package/@swimlane/ngx-datatable)
+
+### Table utils
+1. [ng-table-virtual-scroll](https://www.npmjs.com/package/ng-table-virtual-scroll)
+2. [ngx-pagination](https://www.npmjs.com/package/ngx-pagination)
+
+### Translates
+1. [@angular/localize](https://www.npmjs.com/package/@angular/localize)
+2. [@ngneat/transloco](https://www.npmjs.com/package/@ngneat/transloco)
+
+### Ui Libraries
+1. [ej2](https://ej2.syncfusion.com/home/angular.html)
+2. [nebular](https://akveo.github.io/nebular/docs/getting-started/what-is-nebular#what-is-nebular)
+3. [primeng](https://primefaces.org/primeng/showcase/#/setup)
+4. [angular material extensions](https://github.com/angular-material-extensions)
+5. [jgwidgets](https://www.jqwidgets.com/angular/)
+6. [terada](https://teradata.github.io/covalent/v3/#/)
+7. [mdbootstrap](https://mdbootstrap.com/docs/angular/)
+8. [ng-bootstrap](https://ng-bootstrap.github.io/#/home)
+
+### Ui components
+1. [ngx-countdown](https://www.npmjs.com/package/ngx-countdown)
+2. [angular-archwizard](https://www.npmjs.com/package/angular-archwizard)
+3. [ngx-scrolltop](https://www.npmjs.com/package/ngx-scrolltop)
+
+### Ui layouts
+1. [angular-fullpage](https://www.npmjs.com/package/@fullpage/angular-fullpage)
+2. [angular-split](https://www.npmjs.com/package/angular-split)
+
+### Utils
 1. [until-destroy](https://github.com/ngneat/until-destroy)
+2. [lodash](https://www.npmjs.com/package/lodash)
 
 ## Related Projects:
 1. [nx-starter](https://github.com/happ-agency/nx-starter)
